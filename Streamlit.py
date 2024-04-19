@@ -18,13 +18,13 @@ such that it becomes
 
 # 2. Contents of st.experimental_get_query_params
 st.header('2. Contents of st.experimental_get_query_params')
-st.write(st.query_params())
+st.write(st.experimental_get_query_params())
 
 
 # 3. Retrieving and displaying information from the URL
 st.header('3. Retrieving and displaying information from the URL')
 
-firstname = st.query_params()['firstname'][0]
-surname = st.query_params()['surname'][0]
+firstname = st.experimental_get_query_params()['firstname'][0]
+surname = st.experimental_get_query_params()['surname'][0]
 
 st.write(f'Hello **{firstname} {surname}**, how are you?')
